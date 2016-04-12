@@ -28,6 +28,11 @@ angular.module('starter', ['ionic'])
 
     // var vm = this;
     $scope.artists = data.artists;
+    $scope.onItemDelete = function(item){
+
+      $scope.artists.splice($scope.artists.indexOf(item), 1);
+    }
+
     $scope.moveItem = function(item, fromIndex, toIndex){
 
       $scope.artists.splice(fromIndex, 1);
